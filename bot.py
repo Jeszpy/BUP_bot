@@ -93,7 +93,8 @@ def form():
             summ_total = int(sheet2.Cells(18,10).value)*100
             summ_nds = int(sheet2.Cells(20,10).value)*100
 
-
+            print(summ_total)
+            print(summ_nds)
 
             total_str = str(num2words(summ_total, to = 'currency', currency = 'RUB', separator='', lang='ru'))
             nds_str = str(num2words(summ_nds, to = 'currency', currency = 'RUB', separator='', lang='ru'))
