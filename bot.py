@@ -71,7 +71,7 @@ def form():
             Excel = win32com.client.Dispatch("Excel.Application")
             Excel.Visible = 0
             current_date = str(datetime.now().date())
-            wb2 = Excel.Workbooks.Open(u'D:\\Dev_autonomous\\Python\\BUP_BOT\\xlsx\\template.xlsx')
+            wb2 = Excel.Workbooks.Open(u'D:\\Dev\\Python\\BUP_bot\\xlsx\\template.xlsx')
             sheet2 = wb2.ActiveSheet
             sheet2.Cells(9,3).value = org_name
             sheet2.Cells(10,3).value = org_requisites
@@ -133,7 +133,7 @@ def form():
             print(er)
         finally:
             pass
-        return "Форма отправлена"
+    return "Форма отправлена"
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
