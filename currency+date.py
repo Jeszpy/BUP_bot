@@ -12,8 +12,9 @@ from num2words import num2words
 
 
 # !!! Сумма НДС, Сумма с НДС !!!
-a = 10.15
-b = num2words(a, to = 'currency', currency = 'RUB', separator='', lang='ru')
+a = 499.99
+
+b = str(num2words(a, to = 'currency', currency = 'RUB', separator='', lang='ru'))
 print(b.capitalize()+'.')
 #
 
