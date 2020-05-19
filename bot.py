@@ -116,7 +116,7 @@ def form():
                 sheet2.Rows(16).EntireRow.Hidden = False
             number_name = str(number)
 
-            wb2.ExportAsFixedFormat(0, u'D:\\Dev\\Python\\BUP_bot\\pdf\\Счёт-фактура №'+number_name+'от'+current_date+'.pdf')
+            wb2.ExportAsFixedFormat(0, u'D:\\Dev\\Python\\BUP_bot\\pdf\\Счёт-фактура №'+number_name+' от '+current_date+'.pdf')
             wb2.Save()
             wb2.Close()
 
@@ -129,7 +129,7 @@ def form():
                 if proc.name == TARGET:
                     proc.kill
             time.sleep(0.25)
-            pdf = ('D:\\Dev\\Python\\BUP_bot\\pdf\\Счёт-фактура №'+number_name+'от'+current_date+'.pdf')
+            pdf = ('D:\\Dev\\Python\\BUP_bot\\pdf\\Счёт-фактура №'+number_name+' от '+current_date+'.pdf')
             yag = yagmail.SMTP('belukrprom.bot@gmail.com','belprom1')
             contents = [
                 "Добрый день!",
