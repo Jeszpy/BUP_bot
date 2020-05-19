@@ -75,7 +75,7 @@ def form():
             sheet2.Cells(9,3).value = org_name
             sheet2.Cells(10,3).value = org_requisites
             sheet2.Cells(14,4).value = cards
-            sheet2.Cells(16,4).value = pauchs
+            sheet2.Cells(16,4).value = pauchs/100
             sheet2.Cells(4,1).value = current_date
             
             price1 = int(sheet2.Cells(14,6).value)        # Цена карточки
@@ -90,18 +90,14 @@ def form():
                 sheet2.Cells(16,6).value = 23                    # Регулирование цены от кол-ва
 
             
-            summ_total = int(sheet2.Cells(18,10).value)*100
-            summ_nds = int(sheet2.Cells(20,10).value)*100
-
-            print(summ_total)
-            print(summ_nds)
+            summ_total = float(sheet2.Cells(18,10).value)
+            summ_nds = float(sheet2.Cells(20,10).value)
 
             total_str = str(num2words(summ_total, to = 'currency', currency = 'RUB', separator='', lang='ru'))
             nds_str = str(num2words(summ_nds, to = 'currency', currency = 'RUB', separator='', lang='ru'))
 
-
-            sheet2.Cells(21,3).value = total_str
-            sheet2.Cells(22,3).value = nds_str
+            sheet2.Cells(21,3).value = total_str.capitalize()+'.'
+            sheet2.Cells(22,3).value = nds_str.capitalize()+'.'
 
     
             number = int(sheet2.Cells(2,7).value)
