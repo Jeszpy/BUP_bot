@@ -116,7 +116,6 @@ def form():
                 sheet2.Rows(16).EntireRow.Hidden = False
             number_name = str(number)
 
-            wb2.ExportAsFixedFormat(0, u'D:\\Dev\\Python\\BUP_bot\\xlsx\\Счёт-фактура №'+number_name+' от '+current_date+'.xlsx')
             wb2.ExportAsFixedFormat(0, u'D:\\Dev\\Python\\BUP_bot\\pdf\\Счёт-фактура №'+number_name+' от '+current_date+'.pdf')
             wb2.Save()
             wb2.Close()
